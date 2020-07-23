@@ -1,0 +1,9 @@
+$color1: #42455A;
+$color2: #797EA6;
+$color3: #727594;
+$color4: #2F3140;
+$color5: #ECECEC;
+
+@mixin res($breakpoint){
+    @media only screen and(min-width: $breakpoint){@content}
+}

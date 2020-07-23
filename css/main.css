@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background: #42455A;
+}
+
+.mask {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+  opacity: 0;
+}
+
+.container {
+  width: 320px;
+  height: 420px;
+  display: -ms-grid;
+  display: grid;
+  padding: 15px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    width: 360px;
+    height: 480px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 500px;
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    margin-top: 0px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    width: 700px;
+    height: 530px;
+    bottom: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.container_box {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container_box div {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.container_box_card {
+  background: url(../img/img1.png);
+  -webkit-transform: translateZ(-1px) rotateY(180deg);
+          transform: translateZ(-1px) rotateY(180deg);
+}
+
+.container_box_rewers {
+  background: url(../img/rewers.png);
+}
+
+header {
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  height: 500px;
+  top: 0;
+}
+
+@media only screen and (min-width: 500px) {
+  header {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    width: 700px;
+  }
+}
+
+header h1 {
+  position: relative;
+  z-index: 3;
+  margin-top: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header p {
+  position: relative;
+  z-index: 3;
+}
+
+header .navBtn {
+  z-index: 3;
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 4px solid white;
+  border-radius: 3px;
+  right: 20px;
+  top: 20px;
+}
+
+header .navBtn span:nth-child(1) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-top: hidden;
+  border-left: hidden;
+}
+
+header .navBtn span:nth-child(1)::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  -webkit-transform: rotate(-45deg) translate(6.5px, 9px);
+          transform: rotate(-45deg) translate(6.5px, 9px);
+}
+
+header .navBtn span:nth-child(2) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  opacity: 0;
+}
+
+header .navBtn span:nth-child(3) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+}
+
+header .nav {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background: #797EA6;
+}
+
+header .nav_item {
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #D8937C;
+  float: left;
+  margin-top: 100px;
+  margin-left: 25px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+}
+
+@media only screen and (min-width: 900px) {
+  header .nav_item {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+header .nav_item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 900px) {
+  header .nav_item img {
+    width: unset !important;
+    height: unset !important;
+  }
+}
+
+header .nav_item:nth-child(1) img {
+  width: 44px;
+  height: 70px;
+}
+
+header .nav_item:nth-child(2) img {
+  width: 70px;
+  height: 65px;
+}
+
+header .nav_item:nth-child(3) img {
+  width: 65px;
+  height: 65px;
+}
+
+.nick {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background-color: #DDD;
+  color: black;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.nick p {
+  margin: 30px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.nick input {
+  all: unset;
+  border-bottom: 1px solid black;
+  width: 80%;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.nick button {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #888db0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nick button:hover {
+  background-color: #42455A;
+  color: white;
+}
+
+.score {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.scoreResult {
+  z-index: 2;
+  display: none;
+  position: absolute;
+  background-color: #2F3140;
+  width: 300px;
+  max-height: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  padding-top: 35px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+@media only screen and (min-width: 400px) {
+  .scoreResult {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .scoreResult {
+    font-size: 2rem;
+    width: 400px;
+  }
+}
+
+.scoreResult_licznik {
+  float: left;
+  text-align: right;
+}
+
+.scoreResult_licznik ul {
+  padding: 0;
+}
+
+.scoreResult_licznik ul li {
+  color: #ECECEC;
+  list-style-type: none;
+  margin-top: 49px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .scoreResult_licznik ul li {
+    margin-top: 59px;
+  }
+}
+
+.scoreResult_licznik ul li:first-child {
+  margin-top: 0;
+}
+
+.scoreResult_wyniki {
+  float: left;
+}
+
+.scoreResult_wyniki ul {
+  padding-left: 20px;
+}
+
+.scoreResult_wyniki ul:last-child li:last-child {
+  margin-bottom: 20px;
+}
+
+.scoreResult_wyniki ul li {
+  color: #ECECEC;
+  float: left;
+  list-style-type: none;
+}
+
+.scoreResult_wyniki ul li input {
+  font-size: 1.5rem;
+  resize: none;
+  background-color: #797EA6;
+  border: none;
+  outline: none;
+  max-width: 130px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .scoreResult_wyniki ul li input {
+    max-width: 180px;
+  }
+}
+
+.scoreResult button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 25px;
+  height: 25px;
+}
+
+.scoreResult button::before, .scoreResult button::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  left: 50%;
+  top: 50%;
+}
+
+.scoreResult button::before {
+  -webkit-transform: translate(-50%, -50%) rotate(50deg);
+          transform: translate(-50%, -50%) rotate(50deg);
+}
+
+.scoreResult button::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-50deg);
+          transform: translate(-50%, -50%) rotate(-50deg);
+}
+
+.closingCredits {
+  z-index: 2;
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 600px) {
+  .closingCredits {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

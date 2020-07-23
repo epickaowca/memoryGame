@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mask"></div>
+    <header>
+        <h1 class="navH1">Score:</h1>
+        <p class="score">0</p>
+        <div class="navBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">
+            <div id="scoreList" class="nav_item"><img src="./img/scoreLists.png" alt="scoreLists"></div>
+            <div id="restartGame" class="nav_item"><img src="./img/restart.png" alt="restart"></div>
+            <div id="nickChange" class="nav_item"><img src="./img/nickChange.png" alt="restart"></div>
+        </nav>
+    </header>
+
+    <div class="container">
+    
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+    
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+        
+        <div class="container_box">
+            <div class="container_box_card"></div>
+            <div class="container_box_rewers"></div>
+        </div>
+
+    </div>
+
+    <div class="nick">
+        <p>Can i have you'r nick?</p>   
+        <input type="text" placeholder="nick name"><br>
+        <button onclick='nickName("e")'>Play</button>
+    </div>
+
+    
+    
+    <section class="scoreResult">
+        <button onclick="closeScores()"></button>
+        <div class="scoreResult_licznik">
+          <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+          </ul>
+        </div>
+        <div class="scoreResult_wyniki">
+          
+        </div>
+    </section>
+
+
+
+
+    
+    <div class="closingCredits">
+        <h1>Congratulations you win the game!</h1><br>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/backend.js"></script>
+</body>
+</html>
